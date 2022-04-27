@@ -26,7 +26,7 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     // Solutions Controller
     // -------------------------------------------------------
     Route::get('/solutions', 'App\Http\Controllers\Solutions\SolutionsController@index')->name('solutions');
-    Route::get('/solution/create', function () { return view('solutions.create');})->name('create_solution');
+    Route::get('/solution/create', 'App\Http\Controllers\Solutions\SolutionsController@create')->name('add');
     Route::post('/solution/add', 'App\Http\Controllers\Solutions\SolutionsController@add_solution')->name('solutions.add');
     Route::get('/solution/view/{id}', 'App\Http\Controllers\Solutions\SolutionsController@view_solution')->name('solutions.view');
 

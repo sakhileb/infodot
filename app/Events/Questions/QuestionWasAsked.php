@@ -3,9 +3,9 @@
 namespace App\Events\Questions;
 
 
-use App\Entrepedia;
+use App\Models\Questions;
 use Illuminate\Broadcasting\Channel;
-use App\Http\Resources\EntrepediaResource;
+use App\Http\Resources\QuestionsResource;
 use Illuminate\Broadcasting\InteractsWithSockets;
 use Illuminate\Broadcasting\PresenceChannel;
 use Illuminate\Broadcasting\PrivateChannel;
@@ -18,21 +18,21 @@ class QuestionWasAsked implements ShouldBroadcast
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
 
-    protected $entrepedia;
+    protected $question;
 
     /**
      * Create a new event instance.
      *
      * @return void
      */
-    public function __construct(Entrepedia $entrepedia)
+    public function __construct(Questions $question)
     {
-        $this->entrepedia = $entrepedia;
+        $this->question = $question;
     }
 
     public function broadcastWith()
     {
-        return (new EntrepediaResource($this->entrepedia))->jsonSerialize();
+        return (new QuestionsResource($this->question))->jsonSerialize();
     }
 
     public function broadcastAs()
@@ -47,10 +47,7 @@ class QuestionWasAsked implements ShouldBroadcast
      */
     public function broadcastOn()
     {
-        return $this->entrepedia->user->followers->map(function ($user)
-        {
-            return new PrivateChannel('question.' . $user->id);
-        })->toArray();
+        return new PrivateChannel('question');
     }
 
 }

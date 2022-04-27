@@ -35,11 +35,16 @@ window.Pusher = require('pusher-js');
 
 window.Echo = new Echo({
     broadcaster: 'pusher',
-    key: 'local',
-    encrypted: false,
+    key: '9192c464dfeef6921fc9',
+    encrypted: true,
     disableStats: true,
     forceTLS: false,
     wsHost: window.location.hostname,
     wsPort: 6001
 });
+
+window.Echo.channel('question')
+    .listen('QuestionWasAsked', (e) => {
+        console.log(e.question);
+    });
 

@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers\Questions;
 
+
 use App\Models\Questions;
 use Illuminate\Http\Request;
+use App\Events\Questions\QuestionWasAsked;
 use App\Http\Controllers\Controller;
 
 
@@ -11,8 +13,7 @@ class QuestionsController extends Controller
 {
     public function index()
     {
-        $questions = Questions::all();
-        return view('questions.index')->with(['questions' => $questions]);
+        return view('questions.index');
     }
 
     public function seek()
@@ -45,6 +46,7 @@ class QuestionsController extends Controller
         $question->save();
 
         $questions = Questions::all();
+        // event(new QuestionWasAsked($question));
 
         return redirect('questions')->with(['questions' => $questions]);
     }

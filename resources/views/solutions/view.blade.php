@@ -8,7 +8,7 @@
                 <a href="{{ route('seek') }}" class="justify-items-end btn rounded-full">
                     <i class="fa fa-search mr-1" aria-hidden="true"></i> Seek
                 </a>
-                <a href="{{ route('create_solution') }}" class="justify-items-end btn rounded-full">
+                <a href="{{ route('add') }}" class="justify-items-end btn rounded-full">
                     <i class="fa fa-plus mr-1" aria-hidden="true"></i> Add
                 </a>
             </div>
@@ -18,26 +18,25 @@
         @include('partials.aside-left')
 
         <main class="w-full">
-            <div class="col-span-2 px-4 overflow-y-scroll">
+            <div class="px-4 overflow-y-scroll">
                 @php
-                    $user = \App\Models\User::where('id', $solution->user_id)->first() ?? '';
                     $steps = \App\Models\Steps::where('solution_id', $solution->id)->get() ?? '';
                 @endphp
-                <h1 class="text-gray-900 m-3 text-2xl">Solution By {{ $user->name }}</h1>
+                <h1 class="text-gray-900 m-3 text-2xl">Solution By {{ $solution->user->name }}</h1>
                 <hr class="my-3 text-gray-900">
-                <div class="md:grid md:grid-cols-3 md:gap-6">
-                    <div class="md:col-span-1 flex justify-between">
+                <div class="md:grid md:grid-cols-2 md:gap-2">
+                    <div class="md:col-span-1 w-full">
                         <div class="px-4 sm:px-0">
                             <h3 class="text-lg m-3 font-medium text-gray-900 capitalize">
                                 Title: {{ $solution->solution_title }}</h3>
                             <p class="m-3 text-sm text-gray-600">
                                 Description: {{ $solution->solution_description }}
                             </p>
-                            <livewire:comments :model="$solution" />
+                            <livewire:comments :model="$solution" :solution="$solution" />
                         </div>
                         <div class="px-4 sm:px-0"></div>
                     </div>
-                    <div class="md:mt-0 md:col-span-2">
+                    <div class="md:mt-0 md:col-span-1">
                         @foreach($steps as $step)
                             <div class="m-3 px-4 py-5 sm:p-6 bg-white shadow sm:rounded-lg">
                                 <div class="max-w-xl text-sm text-gray-600">

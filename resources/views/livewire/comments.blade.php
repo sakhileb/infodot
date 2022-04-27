@@ -12,14 +12,44 @@
         <li class="flex align-center flex-col">
             <hr class="my-3 text-gray-900">
             <div class="flex justify-between mx-16">
-                <h4 @click="selected !== 0 ? selected = 0 : selected = null" class="text-gray-600 cursor-pointer">Views</h4>
-                <h4 @click="selected !== 1 ? selected = 1 : selected = null" class="text-gray-600 cursor-pointer">Comments</h4>
-                <h4 @click="selected !== 2 ? selected = 2 : selected = null" class="text-gray-600 cursor-pointer">Popularity</h4>
+                @php
+                    if (empty($question))
+                    {
+                        $model = $solution;
+                    }
+                    else
+                    {
+                        $model = $question;
+                    }
+                @endphp
+
+                <div class="text-gray-800 flex justify-center">
+                    @if($solution)
+                        <a href="#" class="inline-flex items-center {{ $model->likes()->exists() ? 'text-blue-500' : '' }}" wire:click.prevent="storeLike">
+                            <i class="fa fa-thumbs-up mx-1" aria-hidden="true"></i> {{ $model->likes()->count() }}
+                        </a>
+                    @endif
+                </div>
+
+                <h4 @click="selected !== 1 ? selected = 1 : selected = null" class="text-gray-600 cursor-pointer">
+                    <i class="fa fa-comment mt-1 mx-1" aria-hidden="true"></i> {{ $model->comments()->count() }}
+                </h4>
+
+                <div class="text-gray-800 flex justify-center">
+                    @if($question)
+                        @if(Auth()->user()->id === $model->user->id)
+
+                            <a href="#" class="inline-flex items-center
+                            {{ $model->status == 0 ? 'text-red-500' : 'text-green-500' }}" wire:click.prevent="markedAsSolved">
+                                <i class="fa fa-check-circle {{ $model->status == 0 ? 'text-red-500' : 'text-green-500' }} mt-1 mx-1" aria-hidden="true"></i>
+                            </a>
+                        @else
+                            <i class="fa fa-check-circle {{ $model->status == 0 ? 'text-red-500' : 'text-green-500' }} mt-1 mx-1" aria-hidden="true"></i>
+                        @endif
+                    @endif
+                </div>
             </div>
             <hr class="my-3 text-gray-900">
-            <div x-show="selected == 0" class="py-4 px-2 text-gray-600">
-                This are views
-            </div>
             <div x-show="selected == 1" class="py-4 px-2 text-gray-600">
                 @forelse($comments as $comment)
                     <livewire:comment :comment="$comment" :key="$comment->id"/>
@@ -28,9 +58,7 @@
                     <p class="text-gray-900">No comments yet</p>
                 @endforelse
             </div>
-            <div x-show="selected == 2" class="py-4 px-2 text-gray-600">
-                This is the popularity
-            </div>
+
         </li>
     </ul>
 </div>

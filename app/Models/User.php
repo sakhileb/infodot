@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-use App\Answer;
+use App\Models\Like;
 use App\Campaigns\CampaignType;
 use Laravel\Jetstream\HasTeams;
 use Laravel\Sanctum\HasApiTokens;
@@ -57,13 +57,14 @@ class User extends Authenticatable
 
     public function avatar()
     {
-        return 'https://www.gravatar.com/avatar/' . md5($this->email) . '?d=mp';
-    }
-
-
-    public function answers()
-    {
-        return $this->hasMany(Answer::class);
+        if ($this->profile_photo_path == null)
+        {
+            return 'https://www.gravatar.com/avatar/' . md5($this->email) . '?d=mp';
+        }
+        else
+        {
+            return $this->profile_photo_path;
+        }
     }
 
     public function likes()

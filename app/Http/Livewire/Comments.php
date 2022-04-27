@@ -8,17 +8,45 @@ class Comments extends Component
 {
     public $model;
 
+    public $question;
+
+    public $solution;
+
     public $newCommentState = [
-        'body' => ''
+        'body' => '',
+        'status' => 0
     ];
 
     protected $validationAttributes = [
         'newCommentState.body' => 'comment'
     ];
 
+    public function storeLike()
+    {
+        $like = $this->model->likes()->first();
+
+        if($like)
+        {
+            $like->delete();
+        }
+        else
+        {
+            $like = $this->model->likes()->make();
+            $like->user()->associate(auth()->user());
+            $like->save();
+        }
+    }
+
+    public function markedAsSolved()
+    {
+        $solved = $this->model->update(['status' => 1]);
+        $this->newCommentState = [
+            'status' => 1
+        ];
+    }
+
     public function postComment()
     {
-        // dd($this->newCommentState);
         $this->validate([
             'newCommentState.body' => 'required'
         ]);

@@ -9,10 +9,9 @@ use Illuminate\Http\Request;
 
 class SolutionsController extends Controller
 {
-    public function index(Request $request)
+    public function index()
     {
-        $solutions = Solutions::orderBy('created_at', 'desc')->get();
-        return view('solutions')->with(['solutions' => $solutions]);
+        return view('solutions.index');
     }
 
     public function create()
@@ -61,7 +60,7 @@ class SolutionsController extends Controller
         $solutions = Solutions::all();
 
 
-        return view('solutions')->with(['solutions' => $solutions]);
+        return view('solutions.index')->with(['solutions' => $solutions]);
     }
 
     public function view_solution($id)

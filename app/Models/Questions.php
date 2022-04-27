@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\Models\User;
+use App\Models\Like;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -17,7 +18,7 @@ class Questions extends Model
      * @var array
      */
     protected $fillable = [
-        'user_id', 'question', 'description'
+        'user_id', 'question', 'description', 'status'
     ];
 
     protected $searchable = [
@@ -35,6 +36,11 @@ class Questions extends Model
     public function user()
     {
         return $this->belongsTo(User::class);
+    }
+
+    public function likes()
+    {
+        return $this->morphMany(Like::class, 'likable');
     }
 
 }
