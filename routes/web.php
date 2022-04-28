@@ -38,6 +38,12 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::post('/questions/add', 'App\Http\Controllers\Questions\QuestionsController@add_question')->name('questions.add');
     Route::get('/question/view/{qid}', 'App\Http\Controllers\Questions\QuestionsController@view')->name('questions.view');
 
+    // -------------------------------------------------------
+    // Profile Controller
+    // -------------------------------------------------------
+    Route::get('/user/profile/edit', 'App\Http\Controllers\PagesController@edit')->name('profile.edit');
+    Route::get('/user/profile/{id}', 'App\Http\Controllers\PagesController@show')->name('profile.show');
+
 });
 
 // -------------------------------------------------------

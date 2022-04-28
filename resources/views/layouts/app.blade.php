@@ -64,4 +64,21 @@
 <script src="https://unpkg.com/@yaireo/tagify/dist/tagify.polyfills.min.js"></script>
 <script src="{{ asset('js/tags.js') }}" crossorigin="anonymous"></script>
 <script src="{{ asset('js/addSteps.js') }}" crossorigin="anonymous"></script>
+<script type="text/javascript">
+    function changeAtiveTab(event,tabID){
+        let element = event.target;
+        while(element.nodeName !== "A"){
+            element = element.parentNode;
+        }
+        ulElement = element.parentNode.parentNode;
+        aElements = ulElement.querySelectorAll("li > a");
+        tabContents = document.getElementById("content-tabs-id").querySelectorAll(".tab-content > div");
+        for(let i = 0 ; i < aElements.length; i++){
+            tabContents[i].classList.add("hidden");
+            tabContents[i].classList.remove("block");
+        }
+        document.getElementById(tabID).classList.remove("hidden");
+        document.getElementById(tabID).classList.add("block");
+    }
+</script>
 </html>

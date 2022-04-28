@@ -163,10 +163,10 @@
                     @endif
                 </h2>
                 <div>
-                    <button class="justify-items-end btn rounded-full">
-                       <i class="fa fa-search mr-1" aria-hidden="true"></i> Seek
-                    </button>
-                    <a href="{{ route('create_solution') }}" class="justify-items-end btn rounded-full">
+                    <a href="{{ route('seek') }}" class="justify-items-end btn rounded-full">
+                        <i class="fa fa-search mr-1" aria-hidden="true"></i> Seek
+                    </a>
+                    <a href="{{ route('add') }}" class="justify-items-end btn rounded-full">
                         <i class="fa fa-plus mr-1" aria-hidden="true"></i> Add
                     </a>
                 </div>

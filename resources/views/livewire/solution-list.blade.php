@@ -4,7 +4,7 @@
             <div class="w-full px-4" >
                 <div class="card glass lg:card-side text-neutral-content">
                     <figure class="p-6">
-                        <img src="https://picsum.photos/id/1005/300/200" class="rounded-lg shadow-lg">
+                        <img src="https://source.unsplash.com/random/300x200?productivity,business" class="rounded-lg shadow-lg">
                         <div class="grid grid-cols-2">
                             <span class="flex justify-center m-4">
                                 <i class="fas fa-clock p-1"></i>

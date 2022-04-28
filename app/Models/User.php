@@ -3,7 +3,8 @@
 namespace App\Models;
 
 use App\Models\Like;
-use App\Campaigns\CampaignType;
+use App\Models\Questions;
+use App\Models\Solutions;
 use Laravel\Jetstream\HasTeams;
 use Laravel\Sanctum\HasApiTokens;
 use Laravel\Jetstream\HasProfilePhoto;
@@ -70,5 +71,15 @@ class User extends Authenticatable
     public function likes()
     {
         return $this->hasMany(Like::class);
+    }
+
+    public function questions()
+    {
+        return $this->hasMany(Questions::class);
+    }
+
+    public function solutions()
+    {
+        return $this->hasMany(Solutions::class);
     }
 }

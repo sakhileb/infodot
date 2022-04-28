@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire;
 
+use Auth;
 use Livewire\Component;
 
 class Question extends Component
@@ -12,7 +13,7 @@ class Question extends Component
 
     public function storeLike()
     {
-        $like = $this->model->likes()->first();
+        $like = $this->model->likes()->where('user_id', Auth::id())->first();
 
         if($like)
         {

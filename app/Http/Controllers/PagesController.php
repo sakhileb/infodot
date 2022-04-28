@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use App\Models\Steps;
 use App\Models\Solutions;
 use App\Models\Questions;
@@ -33,5 +34,25 @@ class PagesController extends Controller
 
         return view('search_results', ['results' => $results]);
 
+    }
+
+    /**
+     * Show the user profile screen.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\View\View
+     */
+    public function show($id)
+    {
+        $get_profile = User::where('id', $id)->first();
+        return view('profile.show', [
+            'user' => $get_profile,
+        ]);
+    }
+
+    public function edit()
+    {
+
+        return view('profile.edit');
     }
 }

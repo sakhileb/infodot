@@ -24,21 +24,18 @@
                 @endphp
 
                 <div class="text-gray-800 flex justify-center">
-                    @if($solution)
-                        <a href="#" class="inline-flex items-center {{ $model->likes()->exists() ? 'text-blue-500' : '' }}" wire:click.prevent="storeLike">
-                            <i class="fa fa-thumbs-up mx-1" aria-hidden="true"></i> {{ $model->likes()->count() }}
-                        </a>
-                    @endif
+                    <a href="#" class="inline-flex items-center {{ $model->likes()->where('user_id', Auth::id())->exists() ? 'text-blue-500' : '' }}" wire:click.prevent="storeLike">
+                        <i class="fa fa-thumbs-up mx-1" aria-hidden="true"></i> {{ $model->likes()->count() }}
+                    </a>
                 </div>
 
-                <h4 @click="selected !== 1 ? selected = 1 : selected = null" class="text-gray-600 cursor-pointer">
+                <h4 @click="selected != 1 ? selected = 1 : selected = null" class="text-gray-600 cursor-pointer">
                     <i class="fa fa-comment mt-1 mx-1" aria-hidden="true"></i> {{ $model->comments()->count() }}
                 </h4>
 
                 <div class="text-gray-800 flex justify-center">
                     @if($question)
                         @if(Auth()->user()->id === $model->user->id)
-
                             <a href="#" class="inline-flex items-center
                             {{ $model->status == 0 ? 'text-red-500' : 'text-green-500' }}" wire:click.prevent="markedAsSolved">
                                 <i class="fa fa-check-circle {{ $model->status == 0 ? 'text-red-500' : 'text-green-500' }} mt-1 mx-1" aria-hidden="true"></i>
