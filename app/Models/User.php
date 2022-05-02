@@ -5,6 +5,7 @@ namespace App\Models;
 use App\Models\Like;
 use App\Models\Questions;
 use App\Models\Solutions;
+use App\Models\Associates;
 use Laravel\Jetstream\HasTeams;
 use Laravel\Sanctum\HasApiTokens;
 use Laravel\Jetstream\HasProfilePhoto;
@@ -81,5 +82,10 @@ class User extends Authenticatable
     public function solutions()
     {
         return $this->hasMany(Solutions::class);
+    }
+
+    public function associates()
+    {
+        return $this->hasMany(Associates::class);
     }
 }

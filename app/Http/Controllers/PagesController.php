@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use Auth;
 use App\Models\User;
 use App\Models\Steps;
 use App\Models\Solutions;
 use App\Models\Questions;
+use App\Models\Associates;
 use Illuminate\Http\Request;
 
 class PagesController extends Controller
@@ -45,14 +47,15 @@ class PagesController extends Controller
     public function show($id)
     {
         $get_profile = User::where('id', $id)->first();
+        $association = Associates::where('user_id', Auth::id())->where('associate_id', $id)->whereNull('deleted_at')->first();
         return view('profile.show', [
             'user' => $get_profile,
+            'association' => $association,
         ]);
     }
 
     public function edit()
     {
-
         return view('profile.edit');
     }
 }
