@@ -25,8 +25,8 @@
 
                 <div class="text-gray-800 flex justify-center">
                     <a href="#" class="inline-flex items-center {{ $model->likes()->where('user_id', Auth::id())->exists() ? 'text-blue-500' : '' }}" wire:click.prevent="storeLike">
-                        <i class="fa fa-thumbs-up mx-1" aria-hidden="true"></i> {{ $model->likes()->count() }}
-                    </a>
+                    <i class="fa fa-thumbs-up mx-1" aria-hidden="true"></i> {{ $model->likes()->count() }}
+                </a>
                 </div>
 
                 <h4 @click="selected != 1 ? selected = 1 : selected = null" class="text-gray-600 cursor-pointer">

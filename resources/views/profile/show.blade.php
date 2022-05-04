@@ -17,7 +17,7 @@
                     <div class="flex flex-wrap justify-center">
                         <div class="w-full lg:w-3/12 px-4 lg:order-2 flex justify-center text-center mx-auto">
                             <div class="relative">
-                                <img alt="profile-photo" src="{{ $user->avatar() }}" class="shadow-xl rounded-full h-auto align-middle border-none absolute -m-10 lg:-ml-16" style="max-width: 150px;"/>
+                                <img alt="profile-photo" src="{{ (!$user->profile_photo_url) ? $user->avatar() : $user->profile_photo_url }}" class="shadow-xl rounded-full h-auto align-middle border-none absolute -m-10 lg:-ml-16" style="max-width: 100px; min-width: 100px;"/>
                             </div>
                         </div>
                         <div class="w-full lg:w-4/12 px-4 lg:order-3 lg:text-right lg:self-center">

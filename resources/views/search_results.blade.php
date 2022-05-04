@@ -116,9 +116,9 @@
                                             {{ $solution->created_at->diffForHumans() }}
                                         </p>
                                     </div>
-                                    <div role="img" aria-label="bookmark">
+                                    {{-- <div role="img" aria-label="bookmark">
                                         <i class="fas fa-check-circle text-green-500"></i>
-                                    </div>
+                                    </div> --}}
                                 </div>
                             </div>
                             <div class="px-2">
@@ -150,6 +150,7 @@
                 @endif
             </div>
         </div>
+        @include('layouts.footer')
     </x-guest-layout>
 @else
     <x-app-layout>
@@ -229,9 +230,9 @@
                                                         {{ $solution->created_at->diffForHumans() }}
                                                     </p>
                                                 </div>
-                                                <div role="img" aria-label="bookmark">
+                                                {{-- <div role="img" aria-label="bookmark">
                                                     <i class="fas fa-check-circle text-green-500"></i>
-                                                </div>
+                                                </div> --}}
                                             </div>
                                         </div>
                                         <div class="px-2">

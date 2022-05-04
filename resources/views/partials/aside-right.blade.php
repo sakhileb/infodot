@@ -6,7 +6,7 @@
                     <div class="active">
                         <!-- Website Logo -->
                         <span class="block text-sm px-6 py-4 text-gray-400 bg-gray-800 transition duration-300">
-                            <span class="font-semibold text-white text-lg ml-3">Notifications:</span>
+                            <span class="font-semibold text-white text-lg ml-3">Tools:</span>
                         </span>
                     </div>
                 </div>
@@ -15,21 +15,37 @@
             <div class="mobile-menu">
                 <ul class="">
                     <li>
+                        <a href="#contact" class="block text-sm px-6 py-4 text-gray-400 hover:text-white hover:bg-gray-300 transition duration-300">
+                            Files
+                        </a>
+                    </li>
+                    <li>
                         <a href="index.html" class="block text-sm px-6 py-4 text-gray-400 hover:text-white hover:bg-gray-300 transition duration-300">
-                        Business Registration</a>
+                            Docs
+                        </a>
                     </li>
                     <li>
-                        <a href="#services" class="block text-sm px-6 py-4 text-gray-400 hover:text-white hover:bg-gray-300 transition duration-300">Business Plans</a>
+                        <a href="#services" class="block text-sm px-6 py-4 text-gray-400 hover:text-white hover:bg-gray-300 transition duration-300">
+                            Sheets
+                        </a>
                     </li>
                     <li>
-                        <a href="#about" class="block text-sm px-6 py-4 text-gray-400 hover:text-white hover:bg-gray-300 transition duration-300">Sales &amp; Marketing</a>
+                        <a href="#about" class="block text-sm px-6 py-4 text-gray-400 hover:text-white hover:bg-gray-300 transition duration-300">
+                            Pres
+                        </a>
                     </li>
                     <li>
-                        <a href="#contact" class="block text-sm px-6 py-4 text-gray-400 hover:text-white hover:bg-gray-300 transition duration-300">Social Media</a>
+                        <a href="#contact" class="block text-sm px-6 py-4 text-gray-400 hover:text-white hover:bg-gray-300 transition duration-300">
+                            Engage
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#contact" class="block text-sm px-6 py-4 text-gray-400 hover:text-white hover:bg-gray-300 transition duration-300">
+                            Forms
+                        </a>
                     </li>
                 </ul>
             </div>
         </div>
-
     </nav>
 </aside>

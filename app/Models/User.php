@@ -59,14 +59,7 @@ class User extends Authenticatable
 
     public function avatar()
     {
-        if ($this->profile_photo_path == null)
-        {
-            return 'https://www.gravatar.com/avatar/' . md5($this->email) . '?d=mp';
-        }
-        else
-        {
-            return $this->profile_photo_path;
-        }
+       return 'https://www.gravatar.com/avatar/' . md5($this->email) . '?d=mp';
     }
 
     public function likes()

@@ -26,8 +26,8 @@ class PagesController extends Controller
     {
         $results = [];
         $search_term = request()->search;
-        $solutions = Solutions::where('solution_title', 'LIKE',  "%".$search_term."%")->paginate(5);
-        $questions = Questions::where('question', 'LIKE',  "%".$search_term."%")->paginate(5);
+        $solutions = Solutions::whereRaw('MATCH (solution_title, solution_description, tags) AGAINST (?)', array($search_term))->orderBy('id', 'DESC')->paginate(5);
+        $questions = Questions::whereRaw('MATCH (question, description) AGAINST (?)', array($search_term))->orderBy('id', 'DESC')->paginate(5);
 
         $results = [
             'questions' => $questions,
