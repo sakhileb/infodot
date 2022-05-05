@@ -15,7 +15,7 @@
             <div class="mobile-menu">
                 <ul class="">
                     <li>
-                        <a href="#contact" class="block text-sm px-6 py-4 text-gray-400 hover:text-white hover:bg-gray-300 transition duration-300">
+                        <a href="https://files.test/files" target="_blank" class="block text-sm px-6 py-4 text-gray-400 hover:text-white hover:bg-gray-300 transition duration-300">
                             Files
                         </a>
                     </li>
@@ -40,7 +40,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#contact" class="block text-sm px-6 py-4 text-gray-400 hover:text-white hover:bg-gray-300 transition duration-300">
+                        <a href="#" class="block text-sm px-6 py-4 text-gray-400 hover:text-white hover:bg-gray-300 transition duration-300">
                             Forms
                         </a>
                     </li>

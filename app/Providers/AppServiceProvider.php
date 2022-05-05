@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Models\File;
+use App\Models\Folder;
 use App\Models\Solutions;
 use App\Models\Questions;
 use Illuminate\Support\ServiceProvider;
@@ -27,6 +29,8 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         Relation::morphMap([
+            'file' => File::class,
+            'folder' => Folder::class,
             'solutions' => Solutions::class,
             'questions' => Questions::class
         ]);

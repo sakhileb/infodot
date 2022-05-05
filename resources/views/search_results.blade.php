@@ -80,7 +80,7 @@
                                             </p>
                                         </div>
                                         <div role="img" aria-label="bookmark">
-                                            <i class="fas fa-check-circle text-green-500"></i>
+                                            <i class="fa fa-check-circle {{ $question->status == 0 ? 'text-red-500' : 'text-green-500' }} mt-1 mx-1" aria-hidden="true"></i>
                                         </div>
                                     </div>
                                 </div>
@@ -102,50 +102,48 @@
 
                 @if(!empty($results['solutions']))
                     @foreach($results['solutions'] as $solution)
-
-                    <div aria-label="group of cards" tabindex="0" class="focus:outline-none py-8 w-full">
-                        <div tabindex="0" aria-label="card 1" class="mb-7 bg-white p-6 shadow rounded">
-                            <div class="flex items-center border-b border-gray-200 pb-4 mb-2">
-                                {{-- <img src="https://cdn.tuk.dev/assets/components/misc/doge-coin.png" alt="coin avatar" class="w-12 h-12 rounded-full" /> --}}
-                                <div class="flex items-start justify-between w-full">
-                                    <div class="pl-3 w-full">
-                                        <a href="{{ route('solutions.view', ['id' => $solution->id]) }}" tabindex="0" class="focus:outline-none text-xl font-medium leading-5 text-gray-800">
-                                            {{ $solution->solution_title }}
-                                        </a>
-                                        <p tabindex="0" class="focus:outline-none text-sm leading-normal pt-2 text-gray-500">
-                                            {{ $solution->created_at->diffForHumans() }}
-                                        </p>
+                        <div aria-label="group of cards" tabindex="0" class="focus:outline-none py-8 w-full">
+                            <div tabindex="0" aria-label="card 1" class="mb-7 bg-white p-6 shadow rounded">
+                                <div class="flex items-center border-b border-gray-200 pb-4 mb-2">
+                                    {{-- <img src="https://cdn.tuk.dev/assets/components/misc/doge-coin.png" alt="coin avatar" class="w-12 h-12 rounded-full" /> --}}
+                                    <div class="flex items-start justify-between w-full">
+                                        <div class="pl-3 w-full">
+                                            <a href="{{ route('solutions.view', ['id' => $solution->id]) }}" tabindex="0" class="focus:outline-none text-xl font-medium leading-5 text-gray-800">
+                                                {{ $solution->solution_title }}
+                                            </a>
+                                            <p tabindex="0" class="focus:outline-none text-sm leading-normal pt-2 text-gray-500">
+                                                {{ $solution->created_at->diffForHumans() }}
+                                            </p>
+                                        </div>
+                                        {{-- <div role="img" aria-label="bookmark">
+                                            <i class="fas fa-check-circle text-green-500"></i>
+                                        </div> --}}
                                     </div>
-                                    {{-- <div role="img" aria-label="bookmark">
-                                        <i class="fas fa-check-circle text-green-500"></i>
-                                    </div> --}}
+                                </div>
+                                <div class="px-2">
+                                    <a href="{{ route('solutions.view', ['id' => $solution->id]) }}" tabindex="0" class="focus:outline-none text-sm leading-5 py-4 text-gray-600 mt-3 pt-3 line-clamp-3">
+                                        {{ $solution->solution_description }}
+                                    </a>
+                                    @if(!empty($solution->tags))
+                                        <div tabindex="0" class="focus:outline-none flex">
+                                            @php
+                                                $tags = explode(',', $solution->tags) ?? '';
+                                            @endphp
+                                            @foreach($tags as $tag)
+                                                <div class="py-2 mx-1 my-3 px-4 text-xs leading-3 text-indigo-700 rounded-full bg-indigo-100">
+                                                    {{ $tag }}
+                                                </div>
+                                            @endforeach
+                                        </div>
+                                    @endif
+                                </div>
+                                <div class="flex items-center justify-center border-t border-gray-200 pt-4 mt-3">
+                                    <a href="{{ route('solutions.view', ['id' => $solution->id]) }}" class="bg-white text-gray-800 active:bg-gray-100 text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3" type="button" style="transition: all 0.15s ease 0s;">
+                                        Sign in to view
+                                        </a>
                                 </div>
                             </div>
-                            <div class="px-2">
-                                <a href="{{ route('solutions.view', ['id' => $solution->id]) }}" tabindex="0" class="focus:outline-none text-sm leading-5 py-4 text-gray-600 mt-3 pt-3 line-clamp-3">
-                                    {{ $solution->solution_description }}
-                                </a>
-                                @if(!empty($solution->tags))
-                                    <div tabindex="0" class="focus:outline-none flex">
-                                        @php
-                                            $tags = explode(',', $solution->tags) ?? '';
-                                        @endphp
-                                        @foreach($tags as $tag)
-                                            <div class="py-2 mx-1 my-3 px-4 text-xs leading-3 text-indigo-700 rounded-full bg-indigo-100">
-                                                {{ $tag }}
-                                            </div>
-                                        @endforeach
-                                    </div>
-                                @endif
-                            </div>
-                            <div class="flex items-center justify-center border-t border-gray-200 pt-4 mt-3">
-                                <a href="{{ route('solutions.view', ['id' => $solution->id]) }}" class="bg-white text-gray-800 active:bg-gray-100 text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3" type="button" style="transition: all 0.15s ease 0s;">
-                                    Sign in to view
-                                    </a>
-                            </div>
                         </div>
-                    </div>
-
                     @endforeach
                 @endif
             </div>
@@ -195,7 +193,7 @@
                                                     </p>
                                                 </div>
                                                 <div role="img" aria-label="bookmark">
-                                                    <i class="fas fa-check-circle text-green-500"></i>
+                                                    <i class="fa fa-check-circle {{ $question->status == 0 ? 'text-red-500' : 'text-green-500' }} mt-1 mx-1" aria-hidden="true"></i>
                                                 </div>
                                             </div>
                                         </div>
