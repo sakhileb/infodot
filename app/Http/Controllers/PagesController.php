@@ -17,9 +17,43 @@ class PagesController extends Controller
         return view('about');
     }
 
-    public function contact(Request $request)
+    public function contact()
     {
         return view('contact');
+    }
+
+    public function contactSend(Request $request)
+    {
+        // dd($request->all());
+        $request->validate([
+            'name' => 'required',
+            'email' => 'required',
+            'message' => 'required',
+        ]);
+
+        $details = [
+            'name' => $request->name,
+            'email' => $request->email,
+            'message' => $request->message
+        ];
+        //Need to fix this email feature
+        // \Mail::to('testmail@gmail.com')->send(new \App\Mail\MailContact($details));
+        return redirect()->route('contact')->with('success', 'Message Sent Successfully');
+    }
+
+    public function faqs(Request $request)
+    {
+        return view('faqs');
+    }
+
+    public function complains(Request $request)
+    {
+        return view('complains');
+    }
+
+    public function terms(Request $request)
+    {
+        return view('terms');
     }
 
     public function solution_search_results()

@@ -6,7 +6,7 @@
             </div>
 
             <div class="w-full sm:max-w-2xl mt-6 p-6 bg-white shadow-md overflow-hidden sm:rounded-lg prose">
-                <h1 class="title text-center">Policy</h1>
+                <h1 class="title text-center">Complains</h1>
             </div>
         </div>
     </div>

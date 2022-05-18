@@ -6,6 +6,7 @@
         <meta name="theme-color" content="#000000" />
         <link rel="shortcut icon" href="./img/icons/icon.png" />
         <link rel="apple-touch-icon" sizes="76x76" href="./img/icons/icon.png" />
+        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
         <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
         <style>
@@ -348,13 +349,13 @@
                         <span class="block uppercase text-gray-600 text-sm font-semibold mb-2">Useful Links</span>
                         <ul class="list-unstyled">
                             <li>
-                                <a class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"href="{{ url('/') }}">Home</a>
+                                <a class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"href="https://infodot.co.za">Home</a>
                             </li>
                             <li>
-                                <a class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm" href="{{ url('/login') }}">Sign In</a>
+                                <a class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm" href="{{ route('login') }}">Sign In</a>
                             </li>
                             <li>
-                                <a class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm" href="{{ url('/register') }}">Create Account</a>
+                                <a class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm" href="{{ route('register') }}">Create Account</a>
                             </li>
                             <li>
                                 <a class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm" href="https://blupininc.com" target="_blank">BluePin Inc</a>
@@ -365,16 +366,16 @@
                         <span class="block uppercase text-gray-600 text-sm font-semibold mb-2">Other Resources</span>
                         <ul class="list-unstyled">
                             <li>
-                                <a class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm" href="{{ url('/about') }}">About Us</a>
+                                <a class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm" href="{{ route('about') }}">About Us
+                                </a>
                             </li>
                             <li>
-                                <a class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm" href="{{ url('/features') }}">Features</a>
-                            </li>
-                            <li>
-                                <a class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm" href="{{ url('/contact') }}">Contact Us</a>
+                                <a class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm" href="{{ route('contact') }}">Contact Us
+                                </a>
                              </li>
                             <li>
-                                <a class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm" href="{{ url('/terms') }}">Terms &amp; Conditions</a>
+                                <a class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm" href="https://blupininc.com/terms.html" target="_blank">Terms &amp; Conditions
+                                </a>
                             </li>
                         </ul>
                     </div>
@@ -386,7 +387,7 @@
             <div class="w-full md:w-4/12 px-4 mx-auto text-center">
                 <div class="text-sm text-gray-600 font-semibold py-1">
                     Copyright © 2019 InfoDot
-                    <a href="https://www.creative-tim.com" class="text-gray-600 hover:text-gray-900">
+                    <a href="https://infodot.co.za" class="text-gray-600 hover:text-gray-900">
                         All Rights Reserved.
                     </a>.
                 </div>

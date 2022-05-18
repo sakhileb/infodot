@@ -58,6 +58,7 @@
 </body>
 
 {{-- fa js kit --}}
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 <script src="https://kit.fontawesome.com/8690917e6c.js" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/@yaireo/tagify"></script>
 <script src="https://unpkg.com/@yaireo/tagify/dist/tagify.polyfills.min.js"></script>

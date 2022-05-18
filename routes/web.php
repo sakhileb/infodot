@@ -52,6 +52,10 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
 Route::get('/home', 'App\Http\Controllers\HomeController@index')->name('home');
 Route::get('/about', 'App\Http\Controllers\PagesController@about')->name('about');
 Route::get('/contact', 'App\Http\Controllers\PagesController@contact')->name('contact');
+Route::post('/contact-send', 'App\Http\Controllers\PagesController@contactSend')->name('send-contact');
+Route::get('/faqs', 'App\Http\Controllers\PagesController@faqs')->name('faqs');
+Route::get('/complains', 'App\Http\Controllers\PagesController@complains')->name('complains');
+Route::get('/terms', 'App\Http\Controllers\PagesController@terms')->name('terms');
 Route::get('/solution-results', 'App\Http\Controllers\PagesController@solution_search_results')->name('solution_search_results');
 
 // ===============================================================

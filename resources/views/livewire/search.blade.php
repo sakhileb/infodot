@@ -1,7 +1,9 @@
 <div class="min-w-full !z-50">
     <input
         type="text"
-        placeholder="Ask: How To Register A Business?"
+        id="search"
+        placeholder="Ask: How to register a business?"
+        data-typed-items=""
         autofocus
         class="bg-transparent text-gray-500 sm:w-96 w-11/12 mx-5 focus:outline-none py-3 px-5 text-md border-t border-b border-l border-r border-blue-lighter rounded-full"
         wire:model="query"
@@ -33,4 +35,17 @@
                 </div>
             @endif
     @endif
+    @section('js')
+        @parent
+        <script type="text/javascript">
+            var typed4 = new Typed('#search', {
+                strings: ['Some strings without', 'Some HTML', 'Chars'],
+                typeSpeed: 0,
+                backSpeed: 0,
+                attr: 'placeholder',
+                bindInputFocusEvents: true,
+                loop: true
+            });
+        </script>
+    @endsection
 </div>

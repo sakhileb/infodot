@@ -15,32 +15,32 @@
             <div class="mobile-menu">
                 <ul class="">
                     <li>
-                        <a href="https://files.test/files" target="_blank" class="block text-sm px-6 py-4 text-gray-400 hover:text-white hover:bg-gray-300 transition duration-300">
+                        <a href="https://files.infodot.co.za/" target="_blank" class="block text-sm px-6 py-4 text-gray-400 hover:text-white hover:bg-gray-300 transition duration-300">
                             Files
                         </a>
                     </li>
                     <li>
-                        <a href="index.html" class="block text-sm px-6 py-4 text-gray-400 hover:text-white hover:bg-gray-300 transition duration-300">
+                        <a href="https://docs.infodot.co.za/" target="_blank" class=" disabled block text-sm px-6 py-4 text-gray-400 hover:text-white hover:bg-gray-300 transition duration-300">
                             Docs
                         </a>
                     </li>
                     <li>
-                        <a href="#services" class="block text-sm px-6 py-4 text-gray-400 hover:text-white hover:bg-gray-300 transition duration-300">
+                        <a href="https://sheets.infodot.co.za/" target="_blank" class="block text-sm px-6 py-4 text-gray-400 hover:text-white hover:bg-gray-300 transition duration-300">
                             Sheets
                         </a>
                     </li>
                     <li>
-                        <a href="#about" class="block text-sm px-6 py-4 text-gray-400 hover:text-white hover:bg-gray-300 transition duration-300">
+                        <a href="https://pres.infodot.co.za/" target="_blank" class="block text-sm px-6 py-4 text-gray-400 hover:text-white hover:bg-gray-300 transition duration-300">
                             Pres
                         </a>
                     </li>
                     <li>
-                        <a href="#contact" class="block text-sm px-6 py-4 text-gray-400 hover:text-white hover:bg-gray-300 transition duration-300">
+                        <a href="https://engage.infodot.co.za/" target="_blank" class="block text-sm px-6 py-4 text-gray-400 hover:text-white hover:bg-gray-300 transition duration-300">
                             Engage
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="block text-sm px-6 py-4 text-gray-400 hover:text-white hover:bg-gray-300 transition duration-300">
+                        <a href="https://forms.infodot.co.za/" target="_blank" class="block text-sm px-6 py-4 text-gray-400 hover:text-white hover:bg-gray-300 transition duration-300">
                             Forms
                         </a>
                     </li>

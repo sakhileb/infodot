@@ -21,7 +21,7 @@
             <div class="col-span-2 px-4 overflow-y-scroll">
                 <h1 class="text-gray-900 m-3 text-2xl">Ask A Question</h1>
                 <hr class="my-3 text-gray-900">
-                <div class="form lg:w-6/12">
+                <div class="form lg:w-full">
                         <form class="w-full" method="POST" action="{{ route('questions.add') }}" onkeydown="return event.key != 'Enter';">
                             @csrf
                             <div class="flex flex-wrap -mx-3 mb-6">
@@ -43,7 +43,7 @@
                                 </div>
                             </div>
 
-                            <div class="flex flex-wrap -mx-3 mb-6 justify-end">
+                            <div class="flex flex-wrap -mx-3 mb-6 justify-start">
                                 <button class="btn m-3" type="submit">Submit</button>
                             </div>
                         </form>

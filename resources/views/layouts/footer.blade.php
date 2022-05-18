@@ -13,13 +13,13 @@
                     <a href="https://www.infodot.co.za" class="text-gray-700 hover:text-gray-900 text-sm font-semibold block py-1 px-3">InfoDot</a>
                 </li>
                 <li>
-                    <a href="https://www.infodot.co.za/about" class="text-gray-700 hover:text-gray-900 text-sm font-semibold block py-1 px-3">About Us</a>
+                    <a href="{{ route('about') }}" class="text-gray-700 hover:text-gray-900 text-sm font-semibold block py-1 px-3">About Us</a>
                 </li>
                 <li>
-                    <a href="https://www.infodot.co.za" class="text-gray-700 hover:text-gray-900 text-sm font-semibold block py-1 px-3">Blog</a>
+                    <a href="{{ route('contact') }}" class="text-gray-700 hover:text-gray-900 text-sm font-semibold block py-1 px-3">Contact Us</a>
                 </li>
                 <li>
-                    <a href="#" class="text-gray-700 hover:text-gray-900 text-sm font-semibold block py-1 px-3">License</a>
+                    <a href="https://blupininc.com/terms.html" target="_blank" class="text-gray-700 hover:text-gray-900 text-sm font-semibold block py-1 px-3">Terms & Conditions</a>
                 </li>
             </ul>
         </div>

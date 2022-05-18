@@ -70,18 +70,18 @@
                         <h3 class="text-4xl font-semibold leading-normal mb-2 text-gray-800 mb-2">
                             {{ $user->name }}
                         </h3>
-                    <div class="text-sm leading-normal mt-0 mb-2 text-gray-500 font-bold uppercase">
-                        <i class="fas fa-map-marker-alt mr-2 text-lg text-gray-500"></i>
-                        Los Angeles, California
-                    </div>
-                    <div class="mb-2 text-gray-700 mt-10">
-                        <i class="fas fa-briefcase mr-2 text-lg text-gray-500"></i>
-                        Solution Manager - Creative Tim Officer
-                    </div>
-                    <div class="mb-2 text-gray-700">
-                        <i class="fas fa-university mr-2 text-lg text-gray-500"></i>
-                        University of Computer Science
-                    </div>
+                        {{-- <div class="text-sm leading-normal mt-0 mb-2 text-gray-500 font-bold uppercase">
+                            <i class="fas fa-map-marker-alt mr-2 text-lg text-gray-500"></i>
+                            Los Angeles, California
+                        </div>
+                        <div class="mb-2 text-gray-700 mt-10">
+                            <i class="fas fa-briefcase mr-2 text-lg text-gray-500"></i>
+                            Solution Manager - Creative Tim Officer
+                        </div>
+                        <div class="mb-2 text-gray-700">
+                            <i class="fas fa-university mr-2 text-lg text-gray-500"></i>
+                            University of Computer Science
+                        </div> --}}
                     </div>
                     <div class="mt-10 py-10 border-t border-gray-300 text-center">
                         <div class="flex flex-wrap justify-center">

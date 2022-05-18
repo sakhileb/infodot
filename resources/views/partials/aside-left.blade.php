@@ -45,32 +45,32 @@
             <div class="mobile-menu">
                 <ul class="">
                     <li>
-                        <a href="index.html" class="block text-sm px-6 py-4 text-gray-400 hover:text-white hover:bg-gray-300 transition duration-300">
+                        <a href="{{ route('faqs') }}" class="block text-sm px-6 py-4 text-gray-400 hover:text-white hover:bg-gray-300 transition duration-300">
                             FAQ's
                         </a>
                     </li>
                     <li>
-                        <a href="#services" class="block text-sm px-6 py-4 text-gray-400 hover:text-white hover:bg-gray-300 transition duration-300">
+                        <a href="{{ route('about') }}" class="block text-sm px-6 py-4 text-gray-400 hover:text-white hover:bg-gray-300 transition duration-300">
                             About Us
                         </a>
                     </li>
                     <li>
-                        <a href="#about" class="block text-sm px-6 py-4 text-gray-400 hover:text-white hover:bg-gray-300 transition duration-300">
-                            Products
+                        <a href="{{ route('contact') }}" class="block text-sm px-6 py-4 text-gray-400 hover:text-white hover:bg-gray-300 transition duration-300">
+                            Contact Us
                         </a>
                     </li>
                     <li>
-                        <a href="#contact" class="block text-sm px-6 py-4 text-gray-400 hover:text-white hover:bg-gray-300 transition duration-300">
-                            Services
+                        <a href="{{ route('complains') }}" class="block text-sm px-6 py-4 text-gray-400 hover:text-white hover:bg-gray-300 transition duration-300">
+                            Complains
                         </a>
                     </li>
                     <li>
-                        <a href="#contact" class="block text-sm px-6 py-4 text-gray-400 hover:text-white hover:bg-gray-300 transition duration-300">
+                        <a href="{{ route('features') }}" class="block text-sm px-6 py-4 text-gray-400 hover:text-white hover:bg-gray-300 transition duration-300">
                             Features
                         </a>
                     </li>
                     <li>
-                        <a href="#contact" class="block text-sm px-6 py-4 text-gray-400 hover:text-white hover:bg-gray-300 transition duration-300">
+                        <a href="{{ route('terms') }}" class="block text-sm px-6 py-4 text-gray-400 hover:text-white hover:bg-gray-300 transition duration-300">
                             Terms &amp; Conditions
                         </a>
                     </li>

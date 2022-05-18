@@ -9,9 +9,8 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
 
-    <!-- QUILL EDITOR -->
-    <script src="https://cdn.quilljs.com/1.3.4/quill.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vue-quill-editor@3.0.6/dist/vue-quill-editor.js"></script>
+    <!-- Typer -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <!-- Include stylesheet -->
     <link href="https://cdn.quilljs.com/1.3.4/quill.core.css" rel="stylesheet">
     <link href="https://cdn.quilljs.com/1.3.4/quill.snow.css" rel="stylesheet">
