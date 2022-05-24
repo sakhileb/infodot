@@ -65,11 +65,6 @@
                         </a>
                     </li>
                     <li>
-                        <a href="{{ route('features') }}" class="block text-sm px-6 py-4 text-gray-400 hover:text-white hover:bg-gray-300 transition duration-300">
-                            Features
-                        </a>
-                    </li>
-                    <li>
                         <a href="{{ route('terms') }}" class="block text-sm px-6 py-4 text-gray-400 hover:text-white hover:bg-gray-300 transition duration-300">
                             Terms &amp; Conditions
                         </a>

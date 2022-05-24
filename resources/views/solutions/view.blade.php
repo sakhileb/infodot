@@ -22,7 +22,14 @@
                 @php
                     $steps = \App\Models\Steps::where('solution_id', $solution->id)->get() ?? '';
                 @endphp
-                <h1 class="text-gray-900 m-3 text-2xl">Solution By {{ $solution->user->name }}</h1>
+                <h1 class="text-gray-900 m-3 text-2xl flex w-full justify-between">
+                    <span class="justify-start">
+                        Solution By {{ $solution->user->name }}
+                    </span>
+                    @if(Auth::id() == $solution->user->id)
+                        <livewire:solution-crud :model="$solution" :solution="$solution"/>
+                    @endif
+                </h1>
                 <hr class="my-3 text-gray-900">
                 <div class="md:grid md:grid-cols-2 md:gap-2">
                     <div class="md:col-span-1 w-full">

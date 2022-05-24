@@ -25,7 +25,7 @@ class SolutionsController extends Controller
         [ // 1st array is field rules
             'solution_title' =>'required|min:3|max:255',
             'solution_description' =>'required|min:3',
-            'tags-input' =>'required|min:3',
+            'tags' =>'required|min:3',
             'duration' =>'required',
             'duration_type' =>'required'
         ],

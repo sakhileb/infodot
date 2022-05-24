@@ -46,7 +46,7 @@
                             <div class="flex flex-wrap -mx-3 mb-6">
                                 <div class="w-full px-3">
                                     <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">Tags: <span class="text-red-500">(Note: Do not remove the first tag)</span></label>
-                                    <div class="appearance-none block w-full input input-bordered tags-input" data-name="tags-input"></div>
+                                    <div class="appearance-none block w-full input input-bordered tags-input" data-name="tags"></div>
                                     @if($errors->has('tags'))
                                         <div class="text-red-500">{{ $errors->first('tags') }}</div>
                                     @endif

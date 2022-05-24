@@ -19,7 +19,14 @@
 
         <main class="w-full">
             <div class="px-4 overflow-y-scroll">
-                <h1 class="text-gray-900 m-3 text-2xl">Question By {{ $question->user->name }}</h1>
+                <h1 class="text-gray-900 m-3 text-2xl flex w-full justify-between">
+                    <span class="justify-start">
+                        Asked By: {{ $question->user->name }}
+                    </span>
+                    @if(Auth::id() == $question->user->id)
+                        <livewire:question-crud :model="$question" :question="$question"/>
+                    @endif
+                </h1>
                 <hr class="my-3 text-gray-900">
                     <h3 class="text-lg m-3 font-medium text-gray-900 capitalize">
                         Title: {{ $question->question }}</h3>

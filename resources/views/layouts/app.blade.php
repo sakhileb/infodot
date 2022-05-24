@@ -18,7 +18,7 @@
     <!-- Styles -->
     <link rel="stylesheet" href="/css/app.css">
     <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
-    <script defer src="https://unpkg.com/alpinejs@3.10.2/dist/cdn.min.js"></script>
+    {{-- <script defer src="https://unpkg.com/alpinejs@3.10.2/dist/cdn.min.js"></script> --}}
     @livewireStyles
     <!-- Scripts -->
     @if(auth()->user())
