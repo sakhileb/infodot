@@ -1,6 +1,6 @@
 # InfoDot
 > Infodot is a platform for entrepreneurs to search and find practical business solutions.
-> Live demo [_here_](https://www.infodot.co.za). 
+<!-- > Live demo [_here_](https://www.infodot.co.za).  -->
 
 ## Table of Contents
 * [General Info](#general-information)
