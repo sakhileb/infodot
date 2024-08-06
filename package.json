@@ -29,7 +29,7 @@
         "tailwindcss": "^3.0.8",
         "vue": "^2.6.14",
         "vue-loader": "^17.4.2",
-        "vue-template-compiler": "^2.6.14",
+        "vue-template-compiler": "^2.*.*",
         "webpack-dev-server": "^4.7.2"
     },
     "dependencies": {
